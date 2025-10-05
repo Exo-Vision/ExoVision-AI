@@ -2,11 +2,11 @@ import joblib
 import pandas as pd
 
 # 모델 및 스케일러 로드
-model1 = joblib.load("saved_models\model1_binary_catboost_20251005_195122.pkl")
-scaler1 = joblib.load("saved_models\scaler1_20251005_195122.pkl")
-model2 = joblib.load("saved_models\model2_candidate_voting_20251005_195122.pkl")
-scaler2 = joblib.load("saved_models\scaler2_20251005_195122.pkl")
-config = joblib.load("saved_models\config_20251005_195122.pkl")
+model1 = joblib.load("model1_binary_catboost_20251005_195122.pkl")
+scaler1 = joblib.load("scaler1_20251005_195122.pkl")
+model2 = joblib.load("model2_candidate_voting_20251005_195122.pkl")
+scaler2 = joblib.load("scaler2_20251005_195122.pkl")
+config = joblib.load("config_20251005_195122.pkl")
 
 print("모델 로드 완료!")
 print(f"모델 1: {config['model1_name']} - {config['model1_accuracy']*100:.2f}%")
@@ -77,4 +77,4 @@ input = {
     "koi_incl_calculated": True,
 }
 input_pd = pd.DataFrame([input])
-predictions = predict_exoplanet(input)
+predictions = predict_exoplanet(input_pd)

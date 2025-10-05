@@ -1,0 +1,112 @@
+"""
+Mission analysis data for visualization
+미션별 통계 데이터 (Kepler, K2, TESS)
+"""
+
+MISSION_ANALYSIS_DATA = {
+    "TESS": {
+        "PlanetRadiusCount": {
+            "(0 ~ 2.0]": 162,
+            "(2.0 ~ 4.0]": 296,
+            "(4.0 ~ 6.0]": 67,
+            "(6.0 ~ 8.0]": 43,
+            "(8.0 ~ 10.0]": 78,
+            "(10.0 ~ 15.0]": 434,
+            "(15.0 ~ 20.0]": 150,
+            "(20.0+]": 29
+        },
+        "TransitDurationCount": {
+            "(0 ~ 1.0]": 61,
+            "(1.0 ~ 2.0]": 274,
+            "(2.0 ~ 3.0]": 371,
+            "(3.0 ~ 4.0]": 267,
+            "(4.0 ~ 5.0]": 145,
+            "(5.0 ~ 7.0]": 108,
+            "(7.0 ~ 10.0]": 25,
+            "(10.0+]": 16
+        },
+        "TransitDurationMedian": 2.756
+    },
+    "K2": {
+        "PlanetRadiusCount": {
+            "(0 ~ 2.0]": 660,
+            "(2.0 ~ 4.0]": 843,
+            "(4.0 ~ 6.0]": 141,
+            "(6.0 ~ 8.0]": 63,
+            "(8.0 ~ 10.0]": 47,
+            "(10.0 ~ 15.0]": 174,
+            "(15.0 ~ 20.0]": 38,
+            "(20.0+]": 3
+        },
+        "TransitDurationCount": {
+            "(0 ~ 1.0]": 51,
+            "(1.0 ~ 2.0]": 267,
+            "(2.0 ~ 3.0]": 400,
+            "(3.0 ~ 4.0]": 327,
+            "(4.0 ~ 5.0]": 172,
+            "(5.0 ~ 7.0]": 101,
+            "(7.0 ~ 10.0]": 24,
+            "(10.0+]": 11
+        },
+        "TransitDurationMedian": 2.886
+    },
+    "Kepler": {
+        "PlanetRadiusCount": {
+            "(0 ~ 2.0]": 1218,
+            "(2.0 ~ 4.0]": 1205,
+            "(4.0 ~ 6.0]": 139,
+            "(6.0 ~ 8.0]": 52,
+            "(8.0 ~ 10.0]": 32,
+            "(10.0 ~ 15.0]": 74,
+            "(15.0 ~ 20.0]": 7,
+            "(20.0+]": 17
+        },
+        "TransitDurationCount": {
+            "(0 ~ 1.0]": 33,
+            "(1.0 ~ 2.0]": 390,
+            "(2.0 ~ 3.0]": 651,
+            "(3.0 ~ 4.0]": 521,
+            "(4.0 ~ 5.0]": 383,
+            "(5.0 ~ 7.0]": 427,
+            "(7.0 ~ 10.0]": 228,
+            "(10.0+]": 113
+        },
+        "TransitDurationMedian": 3.49
+    }
+}
+
+
+def get_mission_statistics(mission: str = None):
+    """
+    미션별 통계 데이터 반환
+    
+    Args:
+        mission: "TESS", "K2", "Kepler" 중 하나. None이면 전체 반환
+        
+    Returns:
+        해당 미션의 통계 데이터 또는 전체 데이터
+    """
+    if mission:
+        return MISSION_ANALYSIS_DATA.get(mission.upper())
+    return MISSION_ANALYSIS_DATA
+
+
+def get_combined_statistics():
+    """
+    모든 미션의 통계를 결합하여 반환
+    
+    Returns:
+        미션별 중앙값과 총 카운트
+    """
+    return {
+        "transit_duration_medians": {
+            "TESS": MISSION_ANALYSIS_DATA["TESS"]["TransitDurationMedian"],
+            "K2": MISSION_ANALYSIS_DATA["K2"]["TransitDurationMedian"],
+            "Kepler": MISSION_ANALYSIS_DATA["Kepler"]["TransitDurationMedian"]
+        },
+        "total_planets_by_mission": {
+            "TESS": sum(MISSION_ANALYSIS_DATA["TESS"]["PlanetRadiusCount"].values()),
+            "K2": sum(MISSION_ANALYSIS_DATA["K2"]["PlanetRadiusCount"].values()),
+            "Kepler": sum(MISSION_ANALYSIS_DATA["Kepler"]["PlanetRadiusCount"].values())
+        }
+    }

@@ -1,0 +1,23 @@
+[project]
+name = "exovision-ai-service"
+version = "0.1.0"
+description = "ExoVision AI Service - Exoplanet Detection API using CatBoost and Voting Classifier"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.118.0",
+    "pydantic>=2.11.9",
+    "python-multipart>=0.0.20",
+    "uvicorn>=0.37.0",
+    "joblib>=1.4.2",
+    "pandas>=2.2.3",
+    "numpy>=2.1.0",
+    "scikit-learn>=1.5.2",
+    "catboost>=1.2.7",
+    "xgboost>=3.0.5",
+    "lightgbm>=4.6.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

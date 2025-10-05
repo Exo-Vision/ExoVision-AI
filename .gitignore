@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Markdown documentation
+*.md
+
+# Model files (too large for git)
+*.pkl
+*.h5
+*.pth
+*.onnx
+
+# Data files
+*.csv
+*.json
+datasets/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# uv
+uv.lock
