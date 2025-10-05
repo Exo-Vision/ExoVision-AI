@@ -10,7 +10,7 @@ from app.schemas.exoplanet import (
 from app.domain.model_loader import model_service
 from app.core.feature_engineering import (
     create_full_features_from_beginner,
-    validate_expert_input
+    create_full_features_from_expert
 )
 
 router = APIRouter(prefix="/api/v1/exoplanet", tags=["Exoplanet Detection"])
@@ -106,9 +106,9 @@ async def predict_expert(input_data: ExpertExoplanetInput):
         if not model_service.is_loaded():
             raise HTTPException(status_code=503, detail="Model not loaded")
         
-        # 입력 검증 및 DataFrame 변환
+        # 입력 검증 및 DataFrame 변환 (19개 → 29개 피처 생성)
         input_dict = input_data.model_dump()
-        full_features_df = validate_expert_input(input_dict)
+        full_features_df = create_full_features_from_expert(input_dict)
         
         # 예측 수행
         prediction, probability, details = model_service.predict(full_features_df)
