@@ -1,0 +1,40 @@
+# 모델 학습용 피처 리스트
+
+## 기본 피처
+mission
+label
+
+## 행성 파라미터
+pl_orbper
+pl_orbper_min
+pl_orbper_max
+pl_rade
+pl_rade_min
+pl_rade_max
+pl_trandep
+pl_trandep_min
+pl_trandep_max
+pl_trandurh
+pl_trandurh_min
+pl_trandurh_max
+pl_insol
+pl_insol_min
+pl_insol_max
+pl_eqt
+pl_eqt_min
+pl_eqt_max
+
+## 항성 파라미터
+st_teff
+st_teff_min
+st_teff_max
+st_logg
+st_logg_min
+st_logg_max
+st_rad
+st_rad_min
+st_rad_max
+
+## 인코딩 피처
+mission_encoded
+label_encoded

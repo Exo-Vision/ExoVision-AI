@@ -1,0 +1,27 @@
+﻿,kepler,tess,k2,description,unit,unit_match,notes
+disposition,koi_disposition,tfopwg_disp,disposition,외계행성 판별 결과 (정답),categorical,✓,"Kepler: CONFIRMED/FALSE POSITIVE/CANDIDATE, TESS: CP/FP/KP/PC, K2: CONFIRMED/FALSE POSITIVE/CANDIDATE"
+orbital_period,koi_period,pl_orbper,pl_orbper,궤도 주기,days (일),✓,모든 데이터셋에서 단위 동일
+transit_time,koi_time0,pl_tranmid,pl_tranmid,통과 중심 시각,BJD (Barycentric Julian Date),✓,모든 데이터셋에서 BJD 사용
+eccentricity,koi_eccen,,pl_orbeccen,궤도 이심률,dimensionless (무차원),✓,TESS 데이터에는 없음
+impact_parameter,koi_impact,,pl_imppar,충돌 파라미터,dimensionless (무차원),✓,TESS 데이터에는 없음
+transit_duration,koi_duration,pl_trandurh,pl_trandur,통과 지속시간,hours (시간),✓,모든 데이터셋에서 hours 단위 사용
+transit_depth,koi_depth,pl_trandep,pl_trandep,통과 깊이,"Kepler: ppm, TESS: ppm, K2: %",X,"**단위 변환 필요**: K2의 % 값을 ppm으로 변환 (% × 10,000 = ppm)"
+radius_ratio,koi_ror,,pl_ratror,행성-항성 반지름 비율,dimensionless (무차원),✓,TESS 데이터에는 없음
+stellar_density,koi_srho,,st_dens,항성 밀도,g/cm³,✓,TESS 데이터에는 없음
+planet_radius,koi_prad,pl_rade,pl_rade,행성 반지름,Earth radii (지구 반지름),✓,모든 데이터셋에서 지구 반지름 단위 사용
+semi_major_axis,koi_sma,,pl_orbsmax,궤도 장반경,au (천문단위),✓,TESS 데이터에는 없음
+inclination,koi_incl,,pl_orbincl,궤도 경사각,degrees (도),✓,TESS 데이터에는 없음
+equilibrium_temp,koi_teq,pl_eqt,pl_eqt,평형 온도,Kelvin (K),✓,모든 데이터셋에서 K 단위 사용
+insolation_flux,koi_insol,pl_insol,pl_insol,복사 플럭스,Earth flux (지구 플럭스),✓,모든 데이터셋에서 지구 플럭스 단위 사용
+distance_over_radius,koi_dor,,pl_ratdor,행성-항성 거리/항성반지름 비율,dimensionless (무차원),✓,TESS 데이터에는 없음
+stellar_temp,koi_steff,st_teff,st_teff,항성 유효 온도,Kelvin (K),✓,모든 데이터셋에서 K 단위 사용
+stellar_gravity,koi_slogg,st_logg,st_logg,항성 표면 중력,log10(cm/s²),✓,모든 데이터셋에서 log10(cm/s²) 단위 사용
+stellar_metallicity,koi_smet,,st_met,항성 금속 함량,dex,✓,TESS 데이터에는 없음
+stellar_radius,koi_srad,st_rad,st_rad,항성 반지름,Solar radii (태양 반지름),✓,모든 데이터셋에서 태양 반지름 단위 사용
+stellar_mass,koi_smass,,st_mass,항성 질량,Solar mass (태양 질량),✓,TESS 데이터에는 없음
+stellar_age,koi_sage,,st_age,항성 나이,Gyr (기가년),✓,TESS 데이터에는 없음
+right_ascension,ra,ra,ra,적경,degrees (도),✓,모든 데이터셋에서 degree 단위 사용
+declination,dec,dec,dec,적위,degrees (도),✓,모든 데이터셋에서 degree 단위 사용
+j_magnitude,koi_jmag,,sy_jmag,J-band 등급,magnitude (등급),✓,TESS 데이터에는 없음
+h_magnitude,koi_hmag,,sy_hmag,H-band 등급,magnitude (등급),✓,TESS 데이터에는 없음
+k_magnitude,koi_kmag,,sy_kmag,K-band 등급,magnitude (등급),✓,TESS 데이터에는 없음

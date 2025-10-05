@@ -1,0 +1,35 @@
+{
+  "top5_features": [
+    "koi_prad",
+    "dec",
+    "koi_smet",
+    "planet_star_ratio",
+    "planet_density_proxy"
+  ],
+  "default_values": {
+    "ra": 286.59122,
+    "koi_period": 5.825804905,
+    "koi_eccen": 0.0,
+    "koi_longp": 90.0,
+    "koi_incl": 89.0,
+    "koi_impact": 0.26430078739961504,
+    "koi_sma": 0.0637692829715522,
+    "koi_duration": 3.755,
+    "koi_depth": 1344.0161149374558,
+    "koi_insol": 236.31823921724464,
+    "koi_teq": 1091.122930169593,
+    "koi_srad": 1.028,
+    "koi_smass": 0.9891368811510236,
+    "koi_sage": 5.0,
+    "koi_steff": 5720.0,
+    "koi_slogg": 4.415,
+    "orbital_energy": 15.68153116725418,
+    "transit_signal": 9269.356704005051,
+    "stellar_density": 0.9101904637399871,
+    "log_period": 1.9207102685369244,
+    "log_depth": 7.2041612733303015,
+    "log_insol": 5.469402018128579,
+    "orbit_stability": 0.0,
+    "transit_snr": 291.8051138352764
+  }
+}
